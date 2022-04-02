@@ -1,0 +1,56 @@
+& .sliders {
+  margin-top: 18vh;
+  height: 60vh;
+
+  @include sm {
+    height: 80vh;
+    margin-top: 8vh;
+  }
+  & .slider {
+    position: relative;
+    height: 60vh;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 20px;
+    @include sm {
+      height: 80vh;
+    }
+    & .slider-container {
+      position: absolute;
+      bottom: 10px;
+      width: 85%;
+      height: auto;
+
+      & .type {
+        height: 50px;
+
+        & span {
+          padding: 5px 10px;
+          border-radius: 20px;
+          color: white;
+          background-color: $secondary;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    & ul.genres {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      padding: 0;
+      list-style-type: none;
+      & li {
+        padding: 3px 6px;
+        border-radius: 5px;
+        margin: 0 10px;
+        margin-bottom: 10px;
+        color: white;
+      }
+    }
+    & h2 {
+      text-transform: uppercase;
+      color: white;
+    }
+  }
+}

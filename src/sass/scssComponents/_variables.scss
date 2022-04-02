@@ -1,0 +1,54 @@
+// colors
+$primary: #233a50;
+$secondary: #dd003f;
+$tertiary: #d9f436;
+$bg: #020d18;
+$bgsm: #1d262f;
+$text: #abb7c4;
+
+// fonts
+$base-font-size: 18px;
+$font-sm: 12px;
+
+$shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+
+@mixin position($align: center, $justify: center, $flow: row) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $flow;
+}
+
+$breakpoints: (
+  "sm": 500px,
+  "md": 800px,
+  "lg": 960px,
+  "xl": 1200px,
+);
+
+@mixin sm {
+  @media (max-width: map-get($breakpoints, "sm")) {
+    @content;
+  }
+}
+@mixin md {
+  @media (max-width: map-get($breakpoints, "md")) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (max-width: map-get($breakpoints, "lg")) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (max-width: map-get($breakpoints, "xl")) {
+    @content;
+  }
+}
+
+@mixin media($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}

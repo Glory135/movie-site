@@ -1,0 +1,29 @@
+@import "./sass/scssComponents/variables";
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  color: $text;
+  font-size: $base-font-size;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+main {
+  @include position(_, center);
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  background-image: url(./images/bg.gif);
+  overflow-x: hidden;
+  & .main-container {
+    width: 80%;
+    min-height: inherit;
+    height: inherit;
+    @include sm {
+      width: 90%;
+    }
+    @import "./sass/components/header";
+    @import "./sass/components/searchBar";
+    @import "./sass/pages/home";
+  }
+}

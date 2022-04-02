@@ -1,0 +1,227 @@
+& .header {
+  @include position;
+  width: 100%;
+  height: 15vh;
+  border-bottom: 2px solid $bgsm;
+  font-weight: bold;
+
+  & .header-container {
+    @include position(center, space-between);
+    width: 100%;
+    height: 70%;
+
+    & .logo-container {
+      width: 20%;
+      height: 100%;
+      cursor: pointer;
+      @include sm {
+        width: 50%;
+      }
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    & nav {
+      @include position;
+      width: 40%;
+      height: 100%;
+      @include sm {
+        display: none;
+      }
+      @include md {
+        width: 50%;
+      }
+      & ul {
+        @include position(center, space-between);
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        list-style-type: none;
+        & li {
+          @include position;
+          position: relative;
+          height: 100%;
+
+          & span {
+            padding: 3px;
+            cursor: pointer;
+            &:hover {
+              color: white;
+              transition: 0.2s;
+            }
+            &:active {
+              color: $secondary;
+            }
+            &::after {
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              content: "";
+              width: 0;
+              height: 2px;
+              background-color: $secondary;
+            }
+            &:hover::after {
+              width: 100%;
+              transition: 0.2s;
+            }
+          }
+        }
+      }
+    }
+
+    & .header-log {
+      @include position(center, space-around);
+      width: 20%;
+      @include sm {
+        display: none;
+      }
+
+      & .log {
+        padding: 10px 15px;
+        border-radius: 30px;
+        color: white;
+        cursor: pointer;
+
+        &.logIn {
+          border: 1px solid $text;
+          &:hover {
+            color: black;
+            background-color: $text;
+            transition: 0.2s;
+          }
+          &:active {
+            color: white;
+            border: 1px solid white;
+            transition: 0.0001s;
+          }
+        }
+        &.signUp {
+          @include position(center, space-between);
+          background-color: $secondary;
+          border: 1px solid $secondary;
+          & img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 20px;
+          }
+          &:hover {
+            color: $secondary;
+            background-color: transparent;
+            transition: 0.2s;
+          }
+          &:active {
+            color: white;
+            border: 1px solid white;
+            transition: 0.0001s;
+          }
+        }
+      }
+    }
+    & .menu-container {
+      display: none;
+      @include sm {
+        @include position;
+        border: 2px solid $secondary;
+        background-color: $bgsm;
+        padding: 10px;
+        border-radius: 50%;
+        &:active {
+          border: 2px solid transparent;
+        }
+      }
+      & img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+& .header-media-nav {
+  @include position(center, _, column);
+  background-color: $bgsm;
+  padding: 20px 0;
+  box-shadow: $shadow;
+  transform-origin: top;
+  transition: 0.2s;
+  & nav {
+    @include position;
+    width: 100%;
+    margin-bottom: 10px;
+    & ul {
+      width: 80%;
+      padding: 0;
+      list-style-type: none;
+      & li {
+        @include position;
+        width: 100%;
+        position: relative;
+        padding: 10px 0;
+
+        & span {
+          @include position;
+          padding: 5px;
+          cursor: pointer;
+          &::after {
+            position: absolute;
+            bottom: 0;
+            content: "";
+            width: 0%;
+            height: 2px;
+            background-color: $secondary;
+          }
+          &:hover::after {
+            width: 100%;
+            transition: 0.2s;
+          }
+        }
+      }
+    }
+  }
+
+  & .log {
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+    &.logIn {
+      border: 1px solid $text;
+      &:hover {
+        color: black;
+        background-color: $text;
+        transition: 0.2s;
+      }
+      &:active {
+        color: white;
+        border: 1px solid white;
+        transition: 0.0001s;
+      }
+    }
+    &.signUp {
+      @include position(center, space-between);
+      background-color: $secondary;
+      border: 1px solid $secondary;
+      & img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+      &:hover {
+        color: $secondary;
+        background-color: transparent;
+        transition: 0.2s;
+      }
+      &:active {
+        color: white;
+        border: 1px solid white;
+        transition: 0.0001s;
+      }
+    }
+  }
+}
