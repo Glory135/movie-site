@@ -24,7 +24,7 @@ main {
   width: 100%;
   min-height: 100vh;
   height: auto;
-  background-image: url(./images/bg.gif);
+  background-color: #020d18;
   overflow-x: hidden;
 }
 
@@ -79,6 +79,19 @@ main .main-container .header .header-container {
 }
 
 main .main-container .header .header-container .logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 20%;
   height: 100%;
   cursor: pointer;
@@ -93,6 +106,16 @@ main .main-container .header .header-container .logo-container {
 main .main-container .header .header-container .logo-container img {
   width: 100%;
   height: 100%;
+}
+
+main .main-container .header .header-container .logo-container h1 {
+  font-size: 34px;
+  color: white;
+}
+
+main .main-container .header .header-container .logo-container h1 span {
+  color: #dd003f;
+  font-size: 20px;
 }
 
 main .main-container .header .header-container nav {
@@ -496,7 +519,7 @@ main .main-container .search-bar {
   width: 100%;
   height: 7vh;
   background-color: transparent;
-  border: 3px solid #020d18;
+  border: 2px solid #1d262f;
 }
 
 @media (max-width: 500px) {
@@ -565,19 +588,192 @@ main .main-container .search-bar .icon-container i {
   color: white;
 }
 
-main .main-container .home .sliders {
+main .main-container .sidebar {
+  width: 100%;
+  height: auto;
+}
+
+main .main-container .top-rated {
+  margin-bottom: 50px;
+}
+
+main .main-container .top-rated .top-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 50px;
+}
+
+main .main-container .top-rated .top-head i {
+  color: #020d18;
+  margin: 0 20px;
+}
+
+main .main-container .top-rated .top-head h2 {
+  color: #020d18;
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+main .main-container .top-rated .top-main-container {
+  width: 100%;
+  height: auto;
+  border: 1px solid #233a50;
+  border-top: none;
+}
+
+main .main-container .top-rated .top-main-container ul {
+  padding: 10px;
+  list-style-type: none;
+  width: 100%;
+  height: auto;
+}
+
+main .main-container .top-rated .top-main-container ul li {
+  width: 100%;
+  height: 100px;
+  margin: 10px 0;
+  border: 1px solid #020d18;
+}
+
+main .main-container .movieList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #1d262f;
+}
+
+main .main-container .movieList .movieList-img-container {
+  width: 35%;
+  height: 100%;
+}
+
+main .main-container .movieList .movieList-img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+main .main-container .movieList .movieList-desc-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+  height: 90%;
+}
+
+main .main-container .movieList .movieList-desc-container .name-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  height: auto;
+  max-height: 60%;
+}
+
+main .main-container .movieList .movieList-desc-container .name-container h1 {
+  font-size: 16px;
+  position: relative;
+  text-transform: uppercase;
+  color: white;
+}
+
+main .main-container .movieList .movieList-desc-container .name-container h1:hover {
+  color: #dd003f;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+main .main-container .movieList .movieList-desc-container .name-container h1::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+  width: 0%;
+  height: 2px;
+  background-color: #d9f436;
+}
+
+main .main-container .movieList .movieList-desc-container .name-container h1:hover::after {
+  width: 100%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+main .main-container .movieList .movieList-desc-container span {
+  margin: 3px;
+}
+
+main .main-container .movieList .movieList-desc-container span.type {
+  color: white;
+  padding: 3px 5px;
+  background-color: #dd003f;
+  border-radius: 5px;
+}
+
+main .main-container .movieList .movieList-desc-container span.year {
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+main .main-container .home .home-slider-container .sliders {
   margin-top: 18vh;
   height: 60vh;
 }
 
 @media (max-width: 500px) {
-  main .main-container .home .sliders {
+  main .main-container .home .home-slider-container .sliders {
     height: 80vh;
     margin-top: 8vh;
   }
 }
 
-main .main-container .home .sliders .slider {
+main .main-container .home .home-slider-container .sliders .slider {
   position: relative;
   height: 60vh;
   background-position: center;
@@ -587,23 +783,23 @@ main .main-container .home .sliders .slider {
 }
 
 @media (max-width: 500px) {
-  main .main-container .home .sliders .slider {
+  main .main-container .home .home-slider-container .sliders .slider {
     height: 80vh;
   }
 }
 
-main .main-container .home .sliders .slider .slider-container {
+main .main-container .home .home-slider-container .sliders .slider .slider-container {
   position: absolute;
   bottom: 10px;
   width: 85%;
   height: auto;
 }
 
-main .main-container .home .sliders .slider .slider-container .type {
+main .main-container .home .home-slider-container .sliders .slider .slider-container .type {
   height: 50px;
 }
 
-main .main-container .home .sliders .slider .slider-container .type span {
+main .main-container .home .home-slider-container .sliders .slider .slider-container .type span {
   padding: 5px 10px;
   border-radius: 20px;
   color: white;
@@ -611,7 +807,7 @@ main .main-container .home .sliders .slider .slider-container .type span {
   margin-bottom: 20px;
 }
 
-main .main-container .home .sliders .slider ul.genres {
+main .main-container .home .home-slider-container .sliders .slider ul.genres {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -622,7 +818,7 @@ main .main-container .home .sliders .slider ul.genres {
   list-style-type: none;
 }
 
-main .main-container .home .sliders .slider ul.genres li {
+main .main-container .home .home-slider-container .sliders .slider ul.genres li {
   padding: 3px 6px;
   border-radius: 5px;
   margin: 0 10px;
@@ -630,8 +826,28 @@ main .main-container .home .sliders .slider ul.genres li {
   color: white;
 }
 
-main .main-container .home .sliders .slider h2 {
+main .main-container .home .home-slider-container .sliders .slider h2 {
   text-transform: uppercase;
   color: white;
+}
+
+main .main-container .home .home-main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 100px;
+  width: 100%;
+}
+
+main .main-container .home .home-main-container .home-main-container-main {
+  width: 65%;
+  border: 1px solid red;
+}
+
+main .main-container .home .home-main-container .home-main-container-side {
+  width: 30%;
 }
 /*# sourceMappingURL=App.css.map */

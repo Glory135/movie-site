@@ -1,3 +1,21 @@
 & .home {
-  @import "../components/slider";
+  & .home-slider-container{
+     @import "../components/slider";
+  }
+  & .home-main-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    width: 100%;
+
+    & .home-main-container-main{
+    width: 65%;
+    border: 1px solid red;
+    }
+
+    & .home-main-container-side{
+    width: 30%;
+
+    }
+  }
 }

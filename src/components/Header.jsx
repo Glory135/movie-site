@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../images/logo.gif";
+// import logo from "../images/logo.gif";
 import avatar from "../images/test/avatar.jpg";
 import bars from "../images/icon-bars.svg";
 import close from "../images/icon-close.svg";
@@ -11,7 +11,10 @@ export const Header = () => {
       <div className='header'>
         <div className='header-container'>
           <div className='logo-container'>
-            <img src={logo} alt='' />
+            {/* <img src={logo} alt='' /> */}
+            <h1>
+              movie<span>Hunter</span>{" "}
+            </h1>
           </div>
 
           <nav>
