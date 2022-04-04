@@ -5,29 +5,43 @@
   background-color: transparent;
   border: 2px solid $bgsm;
   @include sm {
-    height: 10vh;
+    @include position(flex-start, space-between,column);
+    height: 20vh;
   }
   & select {
     height: 90%;
-    width: 30%;
+    width: 29%;
     background-color: $primary;
     border: 0;
     &:focus {
       outline: none;
     }
     @include sm {
-      width: 25%;
+      width: 100%;
+      height: 46%
     }
   }
-  & input {
+  & .search-container{
+    @include position(center,space-between);
+    width: 70%;
+    height: 100%;
+    @include sm {
+      width: 100%;
+      height: 50%
+    }
+     & input {
     border: none;
-    width: 63%;
+    width: 94%;
     height: 90%;
     background-color: $primary;
     padding: 0 15px;
     color: white;
     &:focus {
       outline: 0;
+    }
+    @include sm {
+      width: 89%;
+    height: 100%
     }
   }
   & .icon-container {
@@ -36,11 +50,15 @@
     height: 90%;
     background-color: $primary;
     cursor: pointer;
-    @include sm {
-      width: 10%;
-    }
+@include sm {
+  width: 10%;
+  height: 100%
+}
     & i {
       color: white;
     }
+    
   }
+  }
+ 
 }

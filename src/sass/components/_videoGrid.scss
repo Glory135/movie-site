@@ -1,0 +1,85 @@
+& .videos-container {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 31%));
+  gap: 3.5%;
+
+  @include xl {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 32%));
+    gap: 2%;
+  }
+  @include lg {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 48.5%));
+    gap: 3%;
+  }
+  @include sm {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 100%));
+  }
+  & .singleVideo {
+    height: 70vh;
+    margin-bottom: 5vh;
+    background-color: $primary;
+    box-shadow: $shadow;
+    @include sm {
+      height: 90vh;
+    }
+    & img.singleVideo-img {
+      width: 100%;
+      height: 70%;
+    }
+
+    & .singleVideo-desc-container {
+      width: 100%;
+      height: 30%;
+
+      & .desc-name-container {
+        text-align: center;
+        width: 100%;
+        height: 70%;
+        & h1 {
+          color: white;
+          font-size: 20px;
+          text-transform: capitalize;
+          @include lg {
+            font-size: 19px;
+          }
+          @include xl {
+            font-size: 17px;
+          }
+          @include md {
+            font-size: 17px;
+          }
+
+          &:hover {
+            color: $secondary;
+            cursor: pointer;
+          }
+        }
+        & span.type {
+          @include position;
+          width: 80px;
+          height: 20px;
+          border-radius: 20px;
+          background-color: $secondary;
+          color: white;
+          margin-top: 5px;
+        }
+      }
+      & .desc-rest {
+        @include position(center, space-between);
+        & i {
+          color: white;
+          margin-left: 10px;
+        }
+        & span {
+          font-size: 12px;
+          margin: 0 5px;
+          &.year {
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+}

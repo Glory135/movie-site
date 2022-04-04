@@ -13,14 +13,12 @@ main {
   width: 100%;
   min-height: 100vh;
   height: auto;
-  // background-image: url(./images/bg.gif);
   background-color: $bg;
   overflow-x: hidden;
   & .main-container {
     width: 80%;
-    min-height: inherit;
-    height: inherit;
-    @include sm {
+    height: auto;
+    @include md {
       width: 90%;
     }
     @import "./sass/components/header";
@@ -28,6 +26,7 @@ main {
     @import "./sass/components/sidebar";
     @import "./sass/components/topRated";
     @import "./sass/components/movieList";
+    @import "./sass/components/videoGrid";
     @import "./sass/pages/home";
   }
 }

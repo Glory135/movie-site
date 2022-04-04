@@ -17,7 +17,7 @@ export const SingleSlider = ({ item }) => {
           <li style={{ backgroundColor: colors[random(4)] }}>adventure</li>
           <li style={{ backgroundColor: colors[random(4)] }}>sci-fi</li>
         </ul>
-        <h2 className='name'>Movie Name</h2>
+        <h2 className='name'>Movie name</h2>
       </div>
     </div>
   );

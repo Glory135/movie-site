@@ -1,21 +1,47 @@
 & .home {
-  & .home-slider-container{
-     @import "../components/slider";
+  height: auto;
+  & .home-slider-container {
+    @import "../components/slider";
+    width: 100%;
+    height: auto;
+    @include position(_, center);
   }
-  & .home-main-container{
+  & .home-main-container {
     display: flex;
     justify-content: space-between;
     margin-top: 100px;
     width: 100%;
-
-    & .home-main-container-main{
-    width: 65%;
-    border: 1px solid red;
+    height: auto;
+    @include sm {
+      flex-direction: column;
     }
 
-    & .home-main-container-side{
-    width: 30%;
+    & .home-main-container-main {
+      width: 65%;
+      height: auto;
 
+      @include sm {
+        width: 100%;
+      }
+      & .home-main-head {
+        width: 100%;
+        height: 15vh;
+
+        & h1 {
+          font-size: 40px;
+          font-weight: lighter;
+          margin: 0;
+          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+            sans-serif;
+        }
+      }
+    }
+
+    & .home-main-container-side {
+      width: 30%;
+      @include sm {
+        width: 100%;
+      }
     }
   }
 }

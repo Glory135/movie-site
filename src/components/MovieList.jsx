@@ -25,7 +25,7 @@ export const MovieList = ({ item, type }) => {
             }}
             className='type'
           >
-            type
+            {type}
           </span>
           <i>
             <span className='year'> 2022</span>

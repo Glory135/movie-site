@@ -8,9 +8,11 @@ export const SearchBar = () => {
         <option value='movies'>Movies</option>
         <option value='series'>Series</option>
       </select>
-      <input type='text' placeholder='search....' />
-      <div className='icon-container'>
-        <i className='fa fa-search'></i>
+      <div className='search-container'>
+        <input type='text' placeholder='search....' />
+        <div className='icon-container'>
+          <i className='fa fa-search'></i>
+        </div>
       </div>
     </div>
   );
