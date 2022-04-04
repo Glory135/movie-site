@@ -12,6 +12,7 @@
     margin-top: 100px;
     width: 100%;
     height: auto;
+    border: 1px solid red;
     @include sm {
       flex-direction: column;
     }

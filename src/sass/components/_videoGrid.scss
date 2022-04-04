@@ -15,14 +15,16 @@
   }
   @include sm {
     grid-template-columns: repeat(auto-fit, minmax(200px, 100%));
+    gap: 0;
   }
   & .singleVideo {
     height: 70vh;
-    margin-bottom: 5vh;
+
     background-color: $primary;
     box-shadow: $shadow;
     @include sm {
       height: 90vh;
+      margin-bottom: 10vh;
     }
     & img.singleVideo-img {
       width: 100%;

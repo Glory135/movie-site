@@ -836,12 +836,12 @@ main .main-container .videos-container {
   main .main-container .videos-container {
     -ms-grid-columns: (minmax(200px, 100%))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(200px, 100%));
+    gap: 0;
   }
 }
 
 main .main-container .videos-container .singleVideo {
   height: 70vh;
-  margin-bottom: 5vh;
   background-color: #233a50;
   -webkit-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
@@ -850,6 +850,7 @@ main .main-container .videos-container .singleVideo {
 @media (max-width: 500px) {
   main .main-container .videos-container .singleVideo {
     height: 90vh;
+    margin-bottom: 10vh;
   }
 }
 
@@ -1124,6 +1125,7 @@ main .main-container .home .home-main-container {
   margin-top: 100px;
   width: 100%;
   height: auto;
+  border: 1px solid red;
 }
 
 @media (max-width: 500px) {
