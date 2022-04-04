@@ -4,7 +4,7 @@ import { TopRated } from "./TopRated";
 export const Sidebar = () => {
   return (
     <div className='sidebar'>
-      <TopRated type='movies' />
+      <TopRated type='movie' />
       <TopRated type='series' />
     </div>
   );

@@ -9,7 +9,7 @@ export const TopRated = ({ type }) => {
         <div
           style={{
             backgroundColor:
-              type === "movies"
+              type === "movie"
                 ? "#d9f436"
                 : type === "series"
                 ? "#dd003f"
@@ -25,7 +25,7 @@ export const TopRated = ({ type }) => {
             {data.slice(0, 5).map((item, index) => (
               <li key={index}>
                 {" "}
-                <MovieList item={item} />{" "}
+                <MovieList type={type} item={item} />{" "}
               </li>
             ))}
           </ul>
