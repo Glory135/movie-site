@@ -1,0 +1,64 @@
+& .paginate {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 31%));
+  column-gap: 3.5%;
+
+  @include xl {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 32%));
+    column-gap: 2%;
+  }
+  @include lg {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 48.5%));
+    column-gap: 3%;
+  }
+  @include sm {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 100%));
+  }
+}
+
+.paginate-btn-container {
+  height: 50px;
+  width: 100%;
+  & .paginationBtn {
+    display: block;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style-type: none;
+    padding: 0;
+
+    & li {
+      color: $secondary;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 0 10px;
+      cursor: pointer;
+      border: 1px solid $secondary;
+    }
+  }
+}
+
+.paginationBtn li:hover {
+  color: white;
+  background-color: $secondary;
+  transition: 0.5s;
+}
+
+.paginationActive {
+  color: white;
+  background-color: $secondary;
+  transition: 0.5s;
+}
+.paginationActive a {
+  color: white;
+}
+.paginationDisabled {
+  color: $secondary;
+  border: 1px solid $secondary;
+
+  transition: 0.5s;
+}

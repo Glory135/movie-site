@@ -1,27 +1,14 @@
 & .videos-container {
   width: 100%;
   height: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 31%));
-  gap: 3.5%;
+  @import "./paginate";
 
-  @include xl {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 32%));
-    gap: 2%;
-  }
-  @include lg {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 48.5%));
-    gap: 3%;
-  }
-  @include sm {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 100%));
-    gap: 0;
-  }
   & .singleVideo {
     height: 70vh;
-
     background-color: $primary;
     box-shadow: $shadow;
+    margin-bottom: 10vh;
+
     @include sm {
       height: 90vh;
       margin-bottom: 10vh;

@@ -12,7 +12,6 @@
     margin-top: 100px;
     width: 100%;
     height: auto;
-    border: 1px solid red;
     @include sm {
       flex-direction: column;
     }
@@ -20,9 +19,9 @@
     & .home-main-container-main {
       width: 65%;
       height: auto;
-
       @include sm {
         width: 100%;
+        margin-bottom: 15vh;
       }
       & .home-main-head {
         width: 100%;

@@ -1,13 +1,12 @@
 import React from "react";
-import { SingleVideo } from "./SingleVideo";
+// import { SingleVideo } from "./SingleVideo";
 import { data } from "../../data";
+import { Paginate } from "../Paginate";
 
 export const Videos = () => {
   return (
     <div className='videos-container'>
-      {data.map((item, index) => {
-        return <SingleVideo key={index} item={item} />;
-      })}
+      <Paginate data={data} />
     </div>
   );
 };
