@@ -8,7 +8,7 @@ export const Header = () => {
   const [mobile, setMobile] = useState(false);
   return (
     <>
-      <div className='header'>
+      <div id='top' className='header'>
         <div className='header-container'>
           <div className='logo-container'>
             {/* <img src={logo} alt='' /> */}
@@ -53,6 +53,7 @@ export const Header = () => {
           transform: mobile ? "scaleY(1)" : "scaleY(0)",
           height: mobile ? "auto" : "0%",
           padding: mobile ? "20px 0" : "0",
+          position: mobile ? "relative" : "absolute",
         }}
         className='header-media-nav'
       >

@@ -1,0 +1,151 @@
+& .footer {
+  @include position;
+  width: 100%;
+  height: 40vh;
+  border-top: 1px solid $bgsm;
+  box-shadow: $shadow;
+  @include md {
+    height: 50vh;
+  }
+  @include sm {
+    height: auto;
+  }
+
+  & .footer-container {
+    @include position;
+    width: 90%;
+    height: 85%;
+    @include sm {
+      height: auto;
+      @include position(_, flex-start, column);
+    }
+
+    & .footer-first-container {
+      width: 40%;
+      height: 100%;
+      @include sm {
+        width: 100%;
+        margin: 30px 0;
+      }
+
+      & .logo-container {
+        @include position;
+        margin-bottom: 30px;
+        width: 200px;
+        @include md {
+          width: 150px;
+        }
+        @include sm {
+          width: 200px;
+          margin-bottom: 10px;
+        }
+        & h1 {
+          font-size: 34px;
+          color: white;
+          & span {
+            color: $secondary;
+            font-size: 20px;
+          }
+        }
+      }
+      & .socials-container {
+        @include position(center, space-around);
+        width: 200px;
+        height: 50px;
+        margin-bottom: 30px;
+        @include md {
+          width: 150px;
+        }
+        @include sm {
+          width: 200px;
+          margin-bottom: 10px;
+        }
+        & .fab {
+          font-size: 25px;
+          color: $secondary;
+          @include md {
+            font-size: 20px;
+          }
+          &:hover {
+            color: white;
+            transition: 0.3s;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    & .footer-second-container {
+      @include position(center, space-between);
+      width: 60%;
+      height: 100%;
+      @include sm {
+        width: 100%;
+        margin: 30px 0;
+        height: auto;
+      }
+
+      & .links-container {
+        width: 40%;
+        height: 100%;
+
+        & h1 {
+          font-size: 35px;
+          color: white;
+          font-weight: lighter;
+          @include md {
+            font-size: 30px;
+          }
+          @include sm {
+            font-size: 20px;
+          }
+        }
+        & nav {
+          & ul {
+            padding: 0;
+            list-style-type: none;
+            & li {
+              @include position;
+              width: 200px;
+              height: 35px;
+              margin-bottom: 10px;
+              border: 1px solid $bgsm;
+              &:hover {
+                border: 1px solid $secondary;
+                color: $secondary;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+      & .up-container {
+        @include position(flex-end, center);
+        width: 7%;
+        height: 100%;
+        @include md {
+          width: 10%;
+        }
+
+        & a {
+          width: 90%;
+          & .up {
+            @include position;
+            width: 100%;
+            height: 70px;
+            background-color: $primary;
+            animation: up 2s infinite;
+            &:hover {
+              animation-play-state: paused;
+              background-color: $tertiary;
+              transition: 0.2s;
+              cursor: pointer;
+              & i {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
