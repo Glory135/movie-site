@@ -39,7 +39,7 @@ export const Sliders = () => {
   return (
     <div className='sliders'>
       <Slider {...carouselProps}>
-        {data.map((singleData, index) => {
+        {data.reverse().map((singleData, index) => {
           return <SingleSlider key={index} item={singleData} />;
         })}
       </Slider>

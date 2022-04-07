@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const SingleVideo = ({ item }) => {
   return (
@@ -6,7 +7,9 @@ export const SingleVideo = ({ item }) => {
       <img className='singleVideo-img' src={item} alt='' />
       <div className='singleVideo-desc-container'>
         <div className='desc-name-container'>
-          <h1>movie name fciwdc vijnd ejnv</h1>
+          <Link className='Link' to='/movies/movie'>
+            <h1>movie name fciwdc vijnd ejnv</h1>
+          </Link>
           <span className='type'>movie</span>
         </div>
         <div className='desc-rest'>

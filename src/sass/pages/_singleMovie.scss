@@ -1,0 +1,119 @@
+& .singleMovie {
+  width: 100%;
+  @include position(_, space-between);
+
+  @include sm {
+    flex-direction: column;
+  }
+  & .singleMovie-main {
+    width: 60%;
+    @include sm {
+      width: 100%;
+    }
+    & .movie-name-container {
+      width: 100%;
+      text-align: center;
+      margin: 20px 0;
+      & h1 {
+        font-size: 40px;
+        color: white;
+        text-transform: capitalize;
+        & span {
+          color: $tertiary;
+          font-size: 30px;
+        }
+      }
+    }
+    & .movie-img-container {
+      width: 100%;
+      & img {
+        width: 100%;
+      }
+    }
+    & .movie-reactions-container {
+      width: 100%;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      & .reaction {
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: 1px solid $text;
+        margin: 10px;
+        & .fa {
+          margin-right: 5px;
+        }
+        &:hover {
+          transition: 0.3s;
+          &.like {
+            border: 1px solid blue;
+            color: blue;
+            cursor: pointer;
+            & .fa {
+              color: blue;
+            }
+          }
+          &.dislike {
+            border: 1px solid red;
+            color: red;
+            cursor: pointer;
+            & .fa {
+              color: red;
+            }
+          }
+          &.fav {
+            border: 1px solid $secondary;
+            color: $secondary;
+            cursor: pointer;
+            & .fa {
+              color: $secondary;
+            }
+          }
+        }
+      }
+    }
+    & .movie-desc-container {
+      width: 100%;
+
+      & .movie-desc {
+        display: flex;
+        width: 100%;
+        padding: 10px 0;
+        & p {
+          margin-left: 10px;
+        }
+      }
+    }
+    & .btn-container {
+      width: 100%;
+      margin: 50px 0;
+      @include position;
+      & .btn {
+        @include position;
+        width: 80%;
+        padding: 20px 0;
+        border: 1px solid $secondary;
+        color: $secondary;
+        & .fa {
+          color: $secondary;
+          margin: 0 20px;
+        }
+        &:hover {
+          border: 1px solid $tertiary;
+          color: $tertiary;
+          cursor: pointer;
+          transition: 0.3s;
+          & .fa {
+            color: $tertiary;
+          }
+        }
+      }
+    }
+  }
+  & .singleMovie-sidebar {
+    width: 30%;
+    @include sm {
+      width: 100%;
+    }
+  }
+}

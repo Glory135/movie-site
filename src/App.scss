@@ -8,6 +8,11 @@
   font-size: $base-font-size;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+.Link {
+  text-decoration: none;
+  color: inherit;
+}
+@import "./sass/components/forms";
 
 main {
   @include position(_, center);
@@ -32,6 +37,9 @@ main {
     @import "./sass/components/videoGrid";
     @import "./sass/components/advert";
     @import "./sass/pages/home";
+    @import "./sass/pages/movies";
+    @import "./sass/pages/series";
+    @import "./sass/pages/singleMovie";
     @import "./sass/components/footer";
   }
 }

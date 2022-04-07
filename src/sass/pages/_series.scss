@@ -1,0 +1,35 @@
+& .series {
+  width: 100%;
+  height: auto;
+  & .series-container {
+    @include position(_, space-between);
+    width: 100%;
+    height: auto;
+    @include sm {
+      flex-direction: column;
+    }
+    & .series-main {
+      width: 60%;
+      @include sm {
+        width: 100%;
+      }
+      & .series-main-head {
+        width: 100%;
+        height: 15vh;
+        & h1 {
+          font-size: 40px;
+          font-weight: lighter;
+          margin: 0;
+          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+            sans-serif;
+        }
+      }
+    }
+    & .series-sidebar {
+      width: 30%;
+      @include sm {
+        width: 100%;
+      }
+    }
+  }
+}

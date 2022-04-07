@@ -37,6 +37,64 @@
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.Link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.form-container {
+  width: 90%;
+  height: 90%;
+}
+
+@media (max-width: 500px) {
+  .form-container {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+}
+
+.form-container .form-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.form-container .form-header h1 {
+  font-size: 40px;
+  color: black;
+  font-weight: lighter;
+}
+
+.form-container .form-header .img-container {
+  padding: 10px;
+  background-color: #dd003f;
+  border: 1px solid #dd003f;
+}
+
+.form-container .form-header .img-container:hover {
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.form-container .btn-container {
+  margin-top: 50px;
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -235,7 +293,7 @@ main .main-container .header .header-container nav ul li span:active {
 main .main-container .header .header-container nav ul li span::after {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -2px;
   content: "";
   width: 0;
   height: 2px;
@@ -455,7 +513,7 @@ main .main-container .header-media-nav nav ul li span {
 
 main .main-container .header-media-nav nav ul li span::after {
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   content: "";
   width: 0%;
   height: 2px;
@@ -1300,6 +1358,332 @@ main .main-container .home .home-main-container .home-main-container-side {
 
 @media (max-width: 500px) {
   main .main-container .home .home-main-container .home-main-container-side {
+    width: 100%;
+  }
+}
+
+main .main-container .movies {
+  width: 100%;
+  height: auto;
+}
+
+main .main-container .movies .movies-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: _;
+      -ms-flex-align: _;
+          align-items: _;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 500px) {
+  main .main-container .movies .movies-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main .main-container .movies .movies-container .movies-main {
+  width: 60%;
+}
+
+@media (max-width: 500px) {
+  main .main-container .movies .movies-container .movies-main {
+    width: 100%;
+  }
+}
+
+main .main-container .movies .movies-container .movies-main .movies-main-head {
+  width: 100%;
+  height: 15vh;
+}
+
+main .main-container .movies .movies-container .movies-main .movies-main-head h1 {
+  font-size: 40px;
+  font-weight: lighter;
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+main .main-container .movies .movies-container .movies-sidebar {
+  width: 30%;
+}
+
+@media (max-width: 500px) {
+  main .main-container .movies .movies-container .movies-sidebar {
+    width: 100%;
+  }
+}
+
+main .main-container .series {
+  width: 100%;
+  height: auto;
+}
+
+main .main-container .series .series-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: _;
+      -ms-flex-align: _;
+          align-items: _;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 500px) {
+  main .main-container .series .series-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main .main-container .series .series-container .series-main {
+  width: 60%;
+}
+
+@media (max-width: 500px) {
+  main .main-container .series .series-container .series-main {
+    width: 100%;
+  }
+}
+
+main .main-container .series .series-container .series-main .series-main-head {
+  width: 100%;
+  height: 15vh;
+}
+
+main .main-container .series .series-container .series-main .series-main-head h1 {
+  font-size: 40px;
+  font-weight: lighter;
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+main .main-container .series .series-container .series-sidebar {
+  width: 30%;
+}
+
+@media (max-width: 500px) {
+  main .main-container .series .series-container .series-sidebar {
+    width: 100%;
+  }
+}
+
+main .main-container .singleMovie {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: _;
+      -ms-flex-align: _;
+          align-items: _;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media (max-width: 500px) {
+  main .main-container .singleMovie {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main .main-container .singleMovie .singleMovie-main {
+  width: 60%;
+}
+
+@media (max-width: 500px) {
+  main .main-container .singleMovie .singleMovie-main {
+    width: 100%;
+  }
+}
+
+main .main-container .singleMovie .singleMovie-main .movie-name-container {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+}
+
+main .main-container .singleMovie .singleMovie-main .movie-name-container h1 {
+  font-size: 40px;
+  color: white;
+  text-transform: capitalize;
+}
+
+main .main-container .singleMovie .singleMovie-main .movie-name-container h1 span {
+  color: #d9f436;
+  font-size: 30px;
+}
+
+main .main-container .singleMovie .singleMovie-main .movie-img-container {
+  width: 100%;
+}
+
+main .main-container .singleMovie .singleMovie-main .movie-img-container img {
+  width: 100%;
+}
+
+main .main-container .singleMovie .singleMovie-main .movie-reactions-container {
+  width: 100%;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .main-container .singleMovie .singleMovie-main .movie-reactions-container .reaction {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid #abb7c4;
+  margin: 10px;
+}
+
+main .main-container .singleMovie .singleMovie-main .movie-reactions-container .reaction .fa {
+  margin-right: 5px;
+}
+
+main .main-container .singleMovie .singleMovie-main .movie-reactions-container .reaction:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+main .main-container .singleMovie .singleMovie-main .movie-reactions-container .reaction:hover.like {
+  border: 1px solid blue;
+  color: blue;
+  cursor: pointer;
+}
+
+main .main-container .singleMovie .singleMovie-main .movie-reactions-container .reaction:hover.like .fa {
+  color: blue;
+}
+
+main .main-container .singleMovie .singleMovie-main .movie-reactions-container .reaction:hover.dislike {
+  border: 1px solid red;
+  color: red;
+  cursor: pointer;
+}
+
+main .main-container .singleMovie .singleMovie-main .movie-reactions-container .reaction:hover.dislike .fa {
+  color: red;
+}
+
+main .main-container .singleMovie .singleMovie-main .movie-reactions-container .reaction:hover.fav {
+  border: 1px solid #dd003f;
+  color: #dd003f;
+  cursor: pointer;
+}
+
+main .main-container .singleMovie .singleMovie-main .movie-reactions-container .reaction:hover.fav .fa {
+  color: #dd003f;
+}
+
+main .main-container .singleMovie .singleMovie-main .movie-desc-container {
+  width: 100%;
+}
+
+main .main-container .singleMovie .singleMovie-main .movie-desc-container .movie-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 10px 0;
+}
+
+main .main-container .singleMovie .singleMovie-main .movie-desc-container .movie-desc p {
+  margin-left: 10px;
+}
+
+main .main-container .singleMovie .singleMovie-main .btn-container {
+  width: 100%;
+  margin: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .main-container .singleMovie .singleMovie-main .btn-container .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80%;
+  padding: 20px 0;
+  border: 1px solid #dd003f;
+  color: #dd003f;
+}
+
+main .main-container .singleMovie .singleMovie-main .btn-container .btn .fa {
+  color: #dd003f;
+  margin: 0 20px;
+}
+
+main .main-container .singleMovie .singleMovie-main .btn-container .btn:hover {
+  border: 1px solid #d9f436;
+  color: #d9f436;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+main .main-container .singleMovie .singleMovie-main .btn-container .btn:hover .fa {
+  color: #d9f436;
+}
+
+main .main-container .singleMovie .singleMovie-sidebar {
+  width: 30%;
+}
+
+@media (max-width: 500px) {
+  main .main-container .singleMovie .singleMovie-sidebar {
     width: 100%;
   }
 }

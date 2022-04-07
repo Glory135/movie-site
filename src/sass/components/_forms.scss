@@ -1,0 +1,31 @@
+.form-container {
+  width: 90%;
+  height: 90%;
+  @include sm {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+  & .form-header {
+    @include position(center, space-between);
+    width: 100%;
+    margin-bottom: 50px;
+    & h1 {
+      font-size: 40px;
+      color: black;
+      font-weight: lighter;
+    }
+    & .img-container {
+      padding: 10px;
+      background-color: $secondary;
+      border: 1px solid $secondary;
+      &:hover {
+        cursor: pointer;
+        background-color: transparent;
+        transition: 0.3s;
+      }
+    }
+  }
+  & .btn-container {
+    margin-top: 50px;
+  }
+}

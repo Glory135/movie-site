@@ -10,7 +10,6 @@ export const Sidebar = () => {
       <TopRated type='movie' />
       <SideAdvert img={sideAd} />
       <TopRated type='series' />
-      <SideAdvert img={sideAd} />
     </div>
   );
 };
