@@ -28,6 +28,36 @@
   }
 }
 
+@-webkit-keyframes social {
+  0% {
+    -webkit-transform: translateX(250px);
+            transform: translateX(250px);
+  }
+  70% {
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes social {
+  0% {
+    -webkit-transform: translateX(250px);
+            transform: translateX(250px);
+  }
+  70% {
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 * {
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -38,6 +68,11 @@
 }
 
 .Link {
+  text-decoration: none;
+  color: inherit;
+}
+
+a {
   text-decoration: none;
   color: inherit;
 }
@@ -1362,6 +1397,299 @@ main .main-container .home .home-main-container .home-main-container-side {
   }
 }
 
+main .main-container .contact {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+main .main-container .contact .contact-head {
+  width: 100%;
+  height: 15vh;
+}
+
+main .main-container .contact .contact-head h1 {
+  font-size: 50px;
+  font-weight: lighter;
+}
+
+main .main-container .contact .contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: _;
+      -ms-flex-align: _;
+          align-items: _;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 500px) {
+  main .main-container .contact .contact-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main .main-container .contact .contact-container .contact-main-container {
+  width: 70%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 500px) {
+  main .main-container .contact .contact-container .contact-main-container {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+main .main-container .contact .contact-container .contact-main-container form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: _;
+      -ms-flex-align: _;
+          align-items: _;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .main-container .contact .contact-container .contact-main-container form label {
+  margin-bottom: 20px;
+}
+
+main .main-container .contact .contact-container .contact-main-container form label div {
+  font-size: large;
+}
+
+main .main-container .contact .contact-container .contact-main-container form label input,
+main .main-container .contact .contact-container .contact-main-container form label textarea {
+  width: 70%;
+  margin-left: 20px;
+  margin-top: 10px;
+  color: white;
+  border: 0;
+  border-bottom: 1px solid #abb7c4;
+  background-color: #233a50;
+  padding: 10px;
+}
+
+@media (max-width: 500px) {
+  main .main-container .contact .contact-container .contact-main-container form label input,
+  main .main-container .contact .contact-container .contact-main-container form label textarea {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+main .main-container .contact .contact-container .contact-main-container form label input:focus,
+main .main-container .contact .contact-container .contact-main-container form label textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #dd003f;
+}
+
+main .main-container .contact .contact-container .contact-main-container form .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 200px;
+  padding: 10px 20px;
+  border: 1px solid #dd003f;
+  color: #dd003f;
+}
+
+main .main-container .contact .contact-container .contact-main-container form .btn:hover {
+  border: 1px solid #d9f436;
+  color: #d9f436;
+}
+
+main .main-container .contact .contact-container .contact-side-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 30%;
+}
+
+@media (max-width: 500px) {
+  main .main-container .contact .contact-container .contact-side-container {
+    width: 100%;
+  }
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div {
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: 200px;
+  border: 1px solid #abb7c4;
+  margin: 10px 0;
+  -webkit-transform: translateX(250px);
+          transform: translateX(250px);
+  -webkit-animation: social 1s forwards;
+          animation: social 1s forwards;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div.second {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div.third {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div.forth {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div.fifth {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div.sixth {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div.seventh {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div:hover {
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div:hover.first {
+  color: blue;
+  border: 1px solid blue;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div:hover.first .fa,
+main .main-container .contact .contact-container .contact-side-container .social-container div:hover.first .fab {
+  color: blue;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div:hover.second {
+  color: red;
+  border: 1px solid red;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div:hover.second .fa,
+main .main-container .contact .contact-container .contact-side-container .social-container div:hover.second .fab {
+  color: red;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div:hover.third {
+  color: #f73447;
+  border: 1px solid #f73447;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div:hover.third .fa,
+main .main-container .contact .contact-container .contact-side-container .social-container div:hover.third .fab {
+  color: #f73447;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div:hover.forth {
+  color: #8282fd;
+  border: 1px solid #8282fd;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div:hover.forth .fa,
+main .main-container .contact .contact-container .contact-side-container .social-container div:hover.forth .fab {
+  color: #8282fd;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div:hover.fifth {
+  color: royalblue;
+  border: 1px solid royalblue;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div:hover.fifth .fa,
+main .main-container .contact .contact-container .contact-side-container .social-container div:hover.fifth .fab {
+  color: royalblue;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div:hover.sixth {
+  color: lightgreen;
+  border: 1px solid lightgreen;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div:hover.sixth .fa,
+main .main-container .contact .contact-container .contact-side-container .social-container div:hover.sixth .fab {
+  color: lightgreen;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div:hover.seventh {
+  color: red;
+  border: 1px solid red;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div:hover.seventh .fa,
+main .main-container .contact .contact-container .contact-side-container .social-container div:hover.seventh .fab {
+  color: red;
+}
+
+main .main-container .contact .contact-container .contact-side-container .social-container div .fa,
+main .main-container .contact .contact-container .contact-side-container .social-container div .fab {
+  margin-right: 15px;
+}
+
 main .main-container .movies {
   width: 100%;
   height: auto;
@@ -1488,6 +1816,270 @@ main .main-container .series .series-container .series-sidebar {
   main .main-container .series .series-container .series-sidebar {
     width: 100%;
   }
+}
+
+main .main-container .profile {
+  width: 100%;
+}
+
+main .main-container .profile .profile-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: _;
+      -ms-flex-align: _;
+          align-items: _;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 500px) {
+  main .main-container .profile .profile-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main .main-container .profile .profile-container .profile-details-container {
+  width: 30%;
+}
+
+@media (max-width: 500px) {
+  main .main-container .profile .profile-container .profile-details-container {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+main .main-container .profile .profile-container .profile-details-container .profile-pic-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 200px;
+  border: 1px solid #abb7c4;
+}
+
+main .main-container .profile .profile-container .profile-details-container .profile-pic-container img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+main .main-container .profile .profile-container .profile-details-container .profile-actions-container {
+  width: 100%;
+}
+
+main .main-container .profile .profile-container .profile-details-container .profile-actions-container .profile-action {
+  padding: 20px 0;
+  border: 1px solid #abb7c4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .main-container .profile .profile-container .profile-details-container .profile-actions-container .profile-action:hover {
+  cursor: pointer;
+  color: #dd003f;
+  background-color: #abb7c4;
+}
+
+main .main-container .profile .profile-container .profile-details-container .profile-actions-container .profile-action:hover i {
+  color: #dd003f;
+}
+
+main .main-container .profile .profile-container .profile-details-container .profile-actions-container .profile-action i {
+  margin-right: 10px;
+}
+
+main .main-container .profile .profile-edit-container {
+  width: 60%;
+  background-color: #1d262f;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+  main .main-container .profile .profile-edit-container {
+    width: 100%;
+  }
+}
+
+main .main-container .profile .profile-edit-container .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 15vh;
+}
+
+main .main-container .profile .profile-edit-container .head h1 {
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+main .main-container .profile .profile-edit-container form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: _;
+      -ms-flex-align: _;
+          align-items: _;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .main-container .profile .profile-edit-container form label {
+  width: 300px;
+  margin: 10px 0;
+}
+
+@media (max-width: 1250px) {
+  main .main-container .profile .profile-edit-container form label {
+    width: 100%;
+  }
+}
+
+main .main-container .profile .profile-edit-container form label div {
+  margin-bottom: 5px;
+}
+
+main .main-container .profile .profile-edit-container form label input {
+  width: 100%;
+  padding: 10px;
+  color: white;
+  border: 0;
+  border-bottom: 1px solid #abb7c4;
+  background-color: #233a50;
+}
+
+main .main-container .profile .profile-edit-container form label input:focus {
+  outline: none;
+  border-bottom: 1px solid #dd003f;
+}
+
+main .main-container .profile .profile-edit-container form .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 30px 0;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #dd003f;
+  color: white;
+  cursor: pointer;
+}
+
+main .main-container .profile .profile-edit-container .password-update-container {
+  width: 100%;
+}
+
+main .main-container .profile .profile-edit-container .password-update-container .head {
+  width: 100%;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 25px;
+}
+
+main .main-container .favourites {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: _;
+      -ms-flex-align: _;
+          align-items: _;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 50px;
+}
+
+main .main-container .favourites .favourites-container {
+  width: 60%;
+}
+
+main .main-container .favourites .favourites-container .fav-head {
+  width: 100%;
+  height: 15vh;
+  font-size: 40px;
+}
+
+main .main-container .favourites .favourites-side {
+  width: 30%;
 }
 
 main .main-container .singleMovie {
@@ -1685,6 +2277,143 @@ main .main-container .singleMovie .singleMovie-sidebar {
 @media (max-width: 500px) {
   main .main-container .singleMovie .singleMovie-sidebar {
     width: 100%;
+  }
+}
+
+main .main-container .move-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 10ch;
+  width: 100%;
+}
+
+main .main-container .move-container .move {
+  padding: 10px 20px;
+  background-color: #d9f436;
+  color: #020d18;
+  border: 1px solid #d9f436;
+}
+
+main .main-container .move-container .move:hover {
+  cursor: pointer;
+  background-color: #020d18;
+  color: #d9f436;
+}
+
+main .main-container .seriesGrid-container {
+  width: 100%;
+  margin: 50px 0;
+  border: 1px solid #abb7c4;
+}
+
+main .main-container .seriesGrid-container .grid-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0 10px;
+  width: 100%;
+  height: 15vh;
+  background-color: #d9f436;
+  font-size: 30px;
+  color: #020d18;
+}
+
+main .main-container .seriesGrid-container .grid-body {
+  width: 100%;
+  padding: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(100px, 20%))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(100px, 20%));
+}
+
+@media (max-width: 1250px) {
+  main .main-container .seriesGrid-container .grid-body {
+    -ms-grid-columns: (minmax(100px, 25%))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(100px, 25%));
+  }
+}
+
+@media (max-width: 500px) {
+  main .main-container .seriesGrid-container .grid-body {
+    -ms-grid-columns: (minmax(100px, 50%))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(100px, 50%));
+  }
+}
+
+main .main-container .seriesGrid-container .grid-body .SingleGrid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 20px auto;
+  height: 25vh;
+  width: 80%;
+  background-position-x: center;
+  cursor: pointer;
+}
+
+main .main-container .seriesGrid-container .grid-body .SingleGrid:hover .grid-desc {
+  color: #dd003f;
+}
+
+main .main-container .seriesGrid-container .grid-body .SingleGrid:active .grid-desc {
+  color: #d9f436;
+}
+
+main .main-container .seriesGrid-container .grid-body .SingleGrid .grid-desc {
+  background-color: #abb7c4;
+  width: 100%;
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #020d18;
+}
+
+@media (max-width: 1000px) {
+  main .main-container .seriesGrid-container .grid-body .SingleGrid .grid-desc {
+    font-size: 14px;
   }
 }
 

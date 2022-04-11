@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const MovieList = ({ item, type }) => {
   return (
@@ -9,7 +10,18 @@ export const MovieList = ({ item, type }) => {
 
       <div className='movieList-desc-container'>
         <div className='name-container'>
-          <h1>Movie Name</h1>
+          <Link
+            to={
+              type === "movie"
+                ? "/movies/movie"
+                : type === "series"
+                ? "/series/seriesSingle"
+                : null
+            }
+            className='Link'
+          >
+            <h1>Movie Name</h1>
+          </Link>
         </div>
 
         <div>

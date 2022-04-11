@@ -1,0 +1,17 @@
+& .favourites {
+  width: 100%;
+  @include position(_, space-between);
+  margin-top: 50px;
+  & .favourites-container {
+    width: 60%;
+    .fav-head {
+      //   @include position;
+      width: 100%;
+      height: 15vh;
+      font-size: 40px;
+    }
+  }
+  & .favourites-side {
+    width: 30%;
+  }
+}

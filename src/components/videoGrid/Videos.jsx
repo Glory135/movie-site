@@ -1,12 +1,11 @@
 import React from "react";
-// import { SingleVideo } from "./SingleVideo";
 import { data } from "../../data";
 import { Paginate } from "../Paginate";
 
-export const Videos = () => {
+export const Videos = ({ type }) => {
   return (
     <div className='videos-container'>
-      <Paginate data={data} />
+      <Paginate data={data} type={type} />
     </div>
   );
 };

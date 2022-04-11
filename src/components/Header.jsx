@@ -70,12 +70,12 @@ export const Header = ({ setLogOpen, setSignOpen }) => {
             <div onClick={() => setSignOpen(true)} className='log signUp'>
               SIGN UP
             </div>
-            {/* <Link className='Link' to='/profile'>
+            <Link className='Link' to='/profile'>
               <div className='log signUp'>
                 {" "}
                 <img src={avatar} alt='' /> PROFILE
               </div>
-            </Link> */}
+            </Link>
           </div>
           <div onClick={() => setMobile(!mobile)} className='menu-container'>
             <img src={mobile ? close : bars} alt='' />

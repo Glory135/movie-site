@@ -12,6 +12,10 @@
   text-decoration: none;
   color: inherit;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 @import "./sass/components/forms";
 
 main {
@@ -37,9 +41,13 @@ main {
     @import "./sass/components/videoGrid";
     @import "./sass/components/advert";
     @import "./sass/pages/home";
+    @import "./sass/pages/contact";
     @import "./sass/pages/movies";
     @import "./sass/pages/series";
+    @import "./sass/pages/profile";
+    @import "./sass/pages/favourites";
     @import "./sass/pages/singleMovie";
+    @import "./sass/pages/singleSeries";
     @import "./sass/components/footer";
   }
 }

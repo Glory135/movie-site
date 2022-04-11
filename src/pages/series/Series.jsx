@@ -1,9 +1,9 @@
 import React from "react";
-import { LongAdvert } from "../components/Adverts";
-import { SearchBar } from "../components/SearchBar";
-import { Sidebar } from "../components/Sidebar";
-import { Videos } from "../components/videoGrid/Videos";
-import longAd from "../images/test/ads2.png";
+import { LongAdvert } from "../../components/Adverts";
+import { SearchBar } from "../../components/SearchBar";
+import { Sidebar } from "../../components/Sidebar";
+import { Videos } from "../../components/videoGrid/Videos";
+import longAd from "../../images/test/ads2.png";
 
 export const Series = () => {
   return (
@@ -16,7 +16,7 @@ export const Series = () => {
             <div className='series-main-head'>
               <h1>All Series</h1>
             </div>
-            <Videos />
+            <Videos type='series' />
           </div>
           <div className='series-sidebar'>
             <Sidebar />

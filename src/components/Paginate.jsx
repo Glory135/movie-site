@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactPaginate from "react-paginate";
 import { SingleVideo } from "./videoGrid/SingleVideo";
 
-export const Paginate = ({ data }) => {
+export const Paginate = ({ data, type }) => {
   const [pageNumber, setPAgeNumber] = useState(0);
 
   const dataPerPage = 18;
@@ -11,7 +11,7 @@ export const Paginate = ({ data }) => {
   const DisplayData = data
     .slice(pagesVisited, pagesVisited + dataPerPage)
     .map((item, index) => {
-      return <SingleVideo key={index} item={item} />;
+      return <SingleVideo key={index} item={item} type={type} />;
     });
 
   const pageCount = Math.ceil(data.length / dataPerPage);
