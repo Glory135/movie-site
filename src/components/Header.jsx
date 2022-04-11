@@ -150,12 +150,12 @@ export const Header = ({ setLogOpen, setSignOpen }) => {
         >
           SIGN UP
         </div>
-        {/* <Link className='Link' to='/profile'>
+        <Link className='Link' to='/profile'>
           <div className='log signUp'>
             {" "}
             <img src={avatar} alt='' /> PROFILE
           </div>
-        </Link> */}
+        </Link>
       </div>
     </>
   );
