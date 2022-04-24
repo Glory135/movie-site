@@ -33,6 +33,8 @@ main {
     @include md {
       width: 90%;
     }
+
+    // normal
     @import "./sass/components/header";
     @import "./sass/components/searchBar";
     @import "./sass/components/sidebar";
@@ -49,5 +51,32 @@ main {
     @import "./sass/pages/singleMovie";
     @import "./sass/pages/singleSeries";
     @import "./sass/components/footer";
+    // normal end
+
+    // admin
+    @import "./sass/admin/components/adminSidebar";
+    @import "./sass/admin/pages/adminDashboard";
+    @import "./sass/admin/pages/postMovie";
+
+    // 404
+    & .notFound {
+      width: 100%;
+      height: 50vh;
+      @include position;
+      & h1 {
+        font-size: 40px;
+        font-weight: lighter;
+        & span {
+          font-size: 40px;
+          font-weight: bold;
+          text-decoration: underline;
+          color: $tertiary;
+          &#ex {
+            color: $secondary;
+            text-decoration: none;
+          }
+        }
+      }
+    }
   }
 }

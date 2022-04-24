@@ -1,11 +1,13 @@
-import React, { useState } from "react";
-import avatar from "../images/test/avatar.jpg";
+import React, { useContext, useState } from "react";
 import bars from "../images/icon-bars.svg";
 import close from "../images/icon-close.svg";
 import { Link, useLocation } from "react-router-dom";
+import { Context } from "../App";
+import { Image } from "cloudinary-react";
 
 export const Header = ({ setLogOpen, setSignOpen }) => {
   const [mobile, setMobile] = useState(false);
+  const { loggedIn, user } = useContext(Context);
   const { pathname } = useLocation();
   const closeOnClick = () => {
     setMobile(false);
@@ -64,19 +66,26 @@ export const Header = ({ setLogOpen, setSignOpen }) => {
           </nav>
 
           <div className='header-log'>
-            <div onClick={() => setLogOpen(true)} className='log logIn'>
-              LOG IN
-            </div>
-            <div onClick={() => setSignOpen(true)} className='log signUp'>
-              SIGN UP
-            </div>
-            <Link className='Link' to='/profile'>
-              <div className='log signUp'>
-                {" "}
-                <img src={avatar} alt='' /> PROFILE
-              </div>
-            </Link>
+            {loggedIn ? (
+              <Link className='Link' to={user.admin ? "/admin" : "/profile"}>
+                <div className='log signUp'>
+                  {" "}
+                  <Image cloudName='drpa7x9bu' publicId={user.image} />
+                  {user.admin ? "ADMIN" : "PROFILE"}
+                </div>
+              </Link>
+            ) : (
+              <>
+                <div onClick={() => setLogOpen(true)} className='log logIn'>
+                  LOG IN
+                </div>
+                <div onClick={() => setSignOpen(true)} className='log signUp'>
+                  SIGN UP
+                </div>
+              </>
+            )}
           </div>
+
           <div onClick={() => setMobile(!mobile)} className='menu-container'>
             <img src={mobile ? close : bars} alt='' />
           </div>
@@ -132,30 +141,42 @@ export const Header = ({ setLogOpen, setSignOpen }) => {
             </li>
           </ul>
         </nav>
-        <div
-          onClick={() => {
-            closeOnClick();
-            setLogOpen(true);
-          }}
-          className='log logIn'
-        >
-          LOG IN
-        </div>
-        <div
-          onClick={() => {
-            closeOnClick();
-            setSignOpen(true);
-          }}
-          className='log signUp'
-        >
-          SIGN UP
-        </div>
-        <Link className='Link' to='/profile'>
-          <div className='log signUp'>
-            {" "}
-            <img src={avatar} alt='' /> PROFILE
-          </div>
-        </Link>
+
+        {loggedIn ? (
+          <Link className='Link' to={user.admin ? "/admin" : "/profile"}>
+            <div
+              onClick={() => {
+                closeOnClick();
+              }}
+              className='log signUp'
+            >
+              {" "}
+              <Image cloudName='drpa7x9bu' publicId={user.image} />{" "}
+              {user.admin ? "ADMIN" : "PROFILE"}
+            </div>
+          </Link>
+        ) : (
+          <>
+            <div
+              onClick={() => {
+                closeOnClick();
+                setLogOpen(true);
+              }}
+              className='log logIn'
+            >
+              LOG IN
+            </div>
+            <div
+              onClick={() => {
+                closeOnClick();
+                setSignOpen(true);
+              }}
+              className='log signUp'
+            >
+              SIGN UP
+            </div>
+          </>
+        )}
       </div>
     </>
   );

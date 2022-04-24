@@ -1,4 +1,6 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { LongAdvert } from "../../components/Adverts";
 import { SearchBar } from "../../components/SearchBar";
 import { Sidebar } from "../../components/Sidebar";
@@ -6,9 +8,22 @@ import { Videos } from "../../components/videoGrid/Videos";
 import longAd from "../../images/test/ads2.png";
 
 export const Movies = () => {
+  const [data, setData] = useState([]);
+
+  const { search } = useLocation();
+
+  useEffect(() => {
+    const getMovies = async () => {
+      const res = await axios.get(
+        `https://moviehunterr.herokuapp.com/api/movies/all/${search}`
+      );
+      setData(res.data);
+    };
+    getMovies();
+  }, [search]);
   return (
     <>
-      <SearchBar />
+      <SearchBar data={data} type='movies' />
       <div className='movies'>
         <LongAdvert img={longAd} />
         <div className='movies-container'>
@@ -16,7 +31,7 @@ export const Movies = () => {
             <div className='movies-main-head'>
               <h1>All Movies</h1>
             </div>
-            <Videos type='movie' />
+            <Videos data={data} type='movie' />
           </div>
           <div className='movies-sidebar'>
             <Sidebar />

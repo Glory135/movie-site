@@ -3,6 +3,17 @@
   height: auto;
   @import "./paginate";
 
+  & .none {
+    font-size: 30px;
+    font-weight: lighter;
+    & span {
+      font-size: 30px;
+      text-decoration: underline;
+      color: $tertiary;
+      font-weight: bold;
+    }
+  }
+
   & .singleVideo {
     height: 70vh;
     background-color: $primary;
@@ -13,7 +24,7 @@
       height: 90vh;
       margin-bottom: 10vh;
     }
-    & img.singleVideo-img {
+    & img {
       width: 100%;
       height: 70%;
     }

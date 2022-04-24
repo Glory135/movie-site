@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { data } from "../../data";
 import { SingleSlider } from "./SingleSlider";
+import axios from "axios";
 
 const carouselProps = {
   autoplay: true,
@@ -36,10 +36,27 @@ const carouselProps = {
 };
 
 export const Sliders = () => {
+  const [movies, setMovies] = useState([]);
+
+  const getMovies = async () => {
+    try {
+      const movies = await axios.get(
+        "https://moviehunterr.herokuapp.com/api/movies/all"
+      );
+      setMovies(movies.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getMovies();
+  });
+
   return (
     <div className='sliders'>
       <Slider {...carouselProps}>
-        {data.reverse().map((singleData, index) => {
+        {movies.reverse().map((singleData, index) => {
           return <SingleSlider key={index} item={singleData} />;
         })}
       </Slider>

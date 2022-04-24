@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Image } from "cloudinary-react";
 
 export const MovieList = ({ item, type }) => {
   return (
     <div className='movieList'>
       <div className='movieList-img-container'>
-        <img src={item} alt='' />
+        <Image cloudName='drpa7x9bu' publicId={item.poster.poster} />
       </div>
 
       <div className='movieList-desc-container'>
@@ -13,14 +14,14 @@ export const MovieList = ({ item, type }) => {
           <Link
             to={
               type === "movie"
-                ? "/movies/movie"
+                ? `/movies/movie/?id=${item._id}`
                 : type === "series"
-                ? "/series/seriesSingle"
+                ? `/series/seriesSingle/?id=${item._id}`
                 : null
             }
             className='Link'
           >
-            <h1>Movie Name</h1>
+            <h1>{item.title}</h1>
           </Link>
         </div>
 
@@ -40,7 +41,7 @@ export const MovieList = ({ item, type }) => {
             {type}
           </span>
           <i>
-            <span className='year'> 2022</span>
+            <span className='year'> {item.year}</span>
           </i>
         </div>
       </div>

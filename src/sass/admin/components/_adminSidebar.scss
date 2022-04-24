@@ -1,0 +1,38 @@
+& .adminSidebar {
+  width: 100%;
+  @include sm {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  & .adminSidebar_item {
+    @include position;
+    width: 100%;
+    padding: 15px 0;
+    margin: 20px 0;
+    border: 1px solid $text;
+    @include sm {
+      width: auto;
+      padding: 15px 20px;
+      margin: 10px 5px;
+    }
+    &:hover {
+      cursor: pointer;
+      border: 1px solid $secondary;
+    }
+    & span {
+      @include sm {
+        display: none;
+      }
+    }
+    &:active .fa,
+    &:active span {
+      color: $secondary;
+    }
+    & .fa {
+      margin-right: 10px;
+      @include sm {
+        margin: none;
+      }
+    }
+  }
+}

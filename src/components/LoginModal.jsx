@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import {
   Button,
   Container,
@@ -7,6 +7,9 @@ import {
   TextField,
 } from "@material-ui/core";
 import close from "../images/icon-close.svg";
+import { Context } from "../App";
+import { notifyError, notifySuccess } from "../Utilities";
+import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -32,7 +35,40 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 export const LoginModal = ({ logOpen, setLogOpen }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { setUser, setLoggedIn } = useContext(Context);
   const classes = useStyles();
+
+  const handleLogIn = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        "https://moviehunterr.herokuapp.com/api/users/login",
+        { email, password }
+      );
+      const token = response.data.token;
+      const user = response.data.user;
+
+      if (token) {
+        localStorage.setItem("movieHunter_user_token", JSON.stringify(token));
+        setLoggedIn(true);
+        setUser(user);
+        notifySuccess(`Welcome ${user.username}`);
+        setLogOpen(false);
+        setEmail("");
+        setPassword("");
+      } else {
+        setPassword("");
+        notifyError("ERROR try again");
+      }
+    } catch (error) {
+      console.log(error);
+      setPassword("");
+      notifyError("Invalid Credentials try again");
+    }
+  };
+
   return (
     <Modal open={logOpen}>
       <Container className={classes.container}>
@@ -43,12 +79,20 @@ export const LoginModal = ({ logOpen, setLogOpen }) => {
               <img src={close} alt='close' />
             </div>
           </div>
-          <form className={classes.form} autoComplete='off'>
+          <form
+            onSubmit={handleLogIn}
+            className={classes.form}
+            autoComplete='off'
+          >
             <div className={classes.item}>
               <TextField
-                id='Username'
-                label='Username'
+                type='email'
+                id='email'
+                label='Email'
                 size='small'
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
                 style={{ width: "100%" }}
               />
             </div>
@@ -58,12 +102,16 @@ export const LoginModal = ({ logOpen, setLogOpen }) => {
                 id='password'
                 label='Password'
                 size='small'
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
                 style={{ width: "100%" }}
               />
             </div>
 
             <div className='btn-container'>
               <Button
+                type='submit'
                 variant='outlined'
                 color='primary'
                 style={{ width: "100%", color: "black" }}

@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { LongAdvert } from "../components/Adverts";
 import longAd from "../images/test/ads2.png";
+import { Context } from "../App";
 
 export const Contact = () => {
+  const { loggedIn, user } = useContext(Context);
+  const [email, setEmail] = useState(loggedIn ? user.email : "");
+
   return (
     <div className='contact'>
       <LongAdvert img={longAd} />
@@ -14,7 +18,12 @@ export const Contact = () => {
           <form>
             <label>
               <div>Email:</div>
-              <input type='text' placeholder='enter email here....' />
+              <input
+                value={email}
+                onChange={(e) => setEmail(e.tarfet.value)}
+                type='text'
+                placeholder='enter email here....'
+              />
             </label>
             <label>
               <div> Subject:</div>

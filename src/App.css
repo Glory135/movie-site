@@ -643,7 +643,7 @@ main .main-container .search-bar {
   width: 100%;
   height: 7vh;
   background-color: transparent;
-  border: 2px solid #1d262f;
+  position: relative;
 }
 
 @media (max-width: 500px) {
@@ -757,6 +757,64 @@ main .main-container .search-bar .search-container .icon-container {
 
 main .main-container .search-bar .search-container .icon-container i {
   color: white;
+}
+
+main .main-container .result-container {
+  width: 40%;
+  height: 35vh;
+  border: 1px splod red;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  background-color: #233a50;
+}
+
+@media (max-width: 500px) {
+  main .main-container .result-container {
+    margin-top: 5px;
+    width: 80%;
+  }
+}
+
+main .main-container .result-container::-webkit-scrollbar {
+  display: none;
+}
+
+main .main-container .result-container .result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  padding: 12px 0;
+  padding-left: 15px;
+  background-color: #233a50;
+  border-bottom: 1px solid #1d262f;
+  text-transform: capitalize;
+}
+
+main .main-container .result-container .result:hover {
+  background-color: #1d262f;
+  cursor: pointer;
+}
+
+main .main-container .result-container .result span {
+  color: #dd003f;
+  font-size: 15px;
+}
+
+main .main-container .result-container .result span span {
+  color: #d9f436;
 }
 
 main .main-container .sidebar {
@@ -1028,6 +1086,18 @@ main .main-container .videos-container .paginationDisabled {
   transition: 0.5s;
 }
 
+main .main-container .videos-container .none {
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+main .main-container .videos-container .none span {
+  font-size: 30px;
+  text-decoration: underline;
+  color: #d9f436;
+  font-weight: bold;
+}
+
 main .main-container .videos-container .singleVideo {
   height: 70vh;
   background-color: #233a50;
@@ -1043,7 +1113,7 @@ main .main-container .videos-container .singleVideo {
   }
 }
 
-main .main-container .videos-container .singleVideo img.singleVideo-img {
+main .main-container .videos-container .singleVideo img {
   width: 100%;
   height: 70%;
 }
@@ -1879,10 +1949,48 @@ main .main-container .profile .profile-container .profile-details-container .pro
   border: 1px solid #abb7c4;
 }
 
-main .main-container .profile .profile-container .profile-details-container .profile-pic-container img {
+main .main-container .profile .profile-container .profile-details-container .profile-pic-container .img-main-container {
+  border-radius: 50%;
+  position: relative;
   width: 150px;
   height: 150px;
+}
+
+main .main-container .profile .profile-container .profile-details-container .profile-pic-container .img-main-container img {
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
+}
+
+main .main-container .profile .profile-container .profile-details-container .profile-pic-container .img-main-container label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  height: 40%;
+  width: 100%;
+  border-radius: 0 0 200px 200px;
+  background-color: rgba(0, 0, 0, 0.402);
+  cursor: pointer;
+}
+
+main .main-container .profile .profile-container .profile-details-container .profile-pic-container .img-main-container label:hover {
+  color: #dd003f;
+}
+
+main .main-container .profile .profile-container .profile-details-container .profile-pic-container .img-main-container input {
+  display: none;
 }
 
 main .main-container .profile .profile-container .profile-details-container .profile-actions-container {
@@ -2729,5 +2837,426 @@ main .main-container .footer .footer-container .footer-second-container .up-cont
 
 main .main-container .footer .footer-container .footer-second-container .up-container a .up:hover i {
   color: white;
+}
+
+main .main-container .adminSidebar {
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  main .main-container .adminSidebar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+main .main-container .adminSidebar .adminSidebar_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  padding: 15px 0;
+  margin: 20px 0;
+  border: 1px solid #abb7c4;
+}
+
+@media (max-width: 500px) {
+  main .main-container .adminSidebar .adminSidebar_item {
+    width: auto;
+    padding: 15px 20px;
+    margin: 10px 5px;
+  }
+}
+
+main .main-container .adminSidebar .adminSidebar_item:hover {
+  cursor: pointer;
+  border: 1px solid #dd003f;
+}
+
+@media (max-width: 500px) {
+  main .main-container .adminSidebar .adminSidebar_item span {
+    display: none;
+  }
+}
+
+main .main-container .adminSidebar .adminSidebar_item:active .fa,
+main .main-container .adminSidebar .adminSidebar_item:active span {
+  color: #dd003f;
+}
+
+main .main-container .adminSidebar .adminSidebar_item .fa {
+  margin-right: 10px;
+}
+
+@media (max-width: 500px) {
+  main .main-container .adminSidebar .adminSidebar_item .fa {
+    margin: none;
+  }
+}
+
+main .main-container .admin {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 500px) {
+  main .main-container .admin {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main .main-container .admin .admin_side_container {
+  width: 15%;
+}
+
+@media (max-width: 500px) {
+  main .main-container .admin .admin_side_container {
+    width: 100%;
+  }
+}
+
+main .main-container .admin .admin_main_container {
+  width: 80%;
+}
+
+@media (max-width: 500px) {
+  main .main-container .admin .admin_main_container {
+    width: 100%;
+  }
+}
+
+main .main-container .admin .admin_main_container .admin_main_head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 10vh;
+  border-bottom: 1px solid #abb7c4;
+  margin-bottom: 30px;
+}
+
+main .main-container .admin .admin_main_container .admin_main_head h1 {
+  font-size: 25px;
+}
+
+main .main-container .admin .admin_main_container .name-container span {
+  padding: 3px 5px;
+  border-radius: 5px;
+  color: white;
+  font-size: 12px;
+}
+
+main .main-container .admin .admin_main_container .action_btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .main-container .admin .admin_main_container .action_btn:hover {
+  cursor: pointer;
+}
+
+main .main-container .admin .admin_main_container .action_btn.edit_btn {
+  background-color: #3bb077;
+}
+
+main .main-container .admin .admin_main_container .action_btn.delete_btn {
+  background-color: red;
+  margin-left: 50px;
+}
+
+main .main-container .admin .admin_main_container .action_btn .action {
+  width: 20px !important;
+  color: white;
+}
+
+main .main-container .admin .admin_main_container .admin_main_videos_container {
+  width: 100%;
+  height: 80vh;
+  margin: 50px 0;
+}
+
+main .main-container .admin .admin_main_container .admin_main_videos_container .admin_main_container_head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 5vh;
+  width: 100%;
+}
+
+main .main-container .admin .admin_main_container .admin_main_videos_container .admin_main_container_head h1 {
+  font-size: 20px;
+}
+
+main .main-container .admin .admin_main_container .admin_main_videos_container .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+main .main-container .admin .admin_main_container .admin_main_videos_container .btn-container button {
+  border: 1px solid #dd003f;
+  background-color: #dd003f;
+  color: #020d18;
+}
+
+main .main-container .admin .admin_main_container .admin_main_videos_container .btn-container button:hover {
+  background-color: transparent;
+  color: #dd003f;
+  cursor: pointer;
+}
+
+main .main-container .admin .admin_main_container .admin_main_videos_container .action_btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .main-container .admin .admin_main_container .admin_main_videos_container .action_btn:hover {
+  cursor: pointer;
+}
+
+main .main-container .admin .admin_main_container .admin_main_videos_container .action_btn.edit_btn {
+  background-color: #3bb077;
+}
+
+main .main-container .admin .admin_main_container .admin_main_videos_container .action_btn.delete_btn {
+  background-color: red;
+  margin-left: 50px;
+}
+
+main .main-container .admin .admin_main_container .admin_main_videos_container .action_btn .action {
+  width: 20px !important;
+  color: white;
+}
+
+main .main-container .postForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .main-container .postForm .select-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0 10px;
+  width: 80%;
+  height: 50px;
+  border: 1px solid #abb7c4;
+  margin: 20px 0;
+  overflow-x: scroll;
+}
+
+@media (max-width: 500px) {
+  main .main-container .postForm .select-container {
+    width: 100%;
+  }
+}
+
+main .main-container .postForm .select-container .selected {
+  padding: 3px 5px;
+  border: 1px solid #dd003f;
+  margin: 0 10px;
+}
+
+main .main-container .postForm .select-container .selected span {
+  margin-left: 10px;
+  width: 15px;
+  height: 15px;
+}
+
+main .main-container .postForm .select-container .selected span:hover {
+  cursor: pointer;
+}
+
+main .main-container .postForm .select-container .selected span img {
+  width: 15px;
+  height: 15px;
+}
+
+main .main-container .postForm select {
+  width: 18%;
+  height: 50px;
+  margin: 20px 0;
+  background-color: transparent;
+  border: 1px solid #abb7c4;
+}
+
+@media (max-width: 500px) {
+  main .main-container .postForm select {
+    width: 100%;
+  }
+}
+
+main .main-container .postForm .input-container {
+  width: 400px;
+  margin: 20px 0;
+}
+
+main .main-container .postForm .input-container legend {
+  color: #abb7c4;
+}
+
+main .main-container .postForm .input-container input {
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid #abb7c4;
+  width: 100%;
+  background-color: transparent;
+  padding-right: 10px;
+}
+
+main .main-container .postForm .input-container input:focus {
+  outline: none;
+  border-bottom: 1px solid #dd003f;
+  border-right: 1px solid #dd003f;
+}
+
+main .main-container .postForm .input-container .file_label span {
+  margin-top: 40px;
+  padding: 10px 20px;
+  border: 1px solid #abb7c4;
+}
+
+main .main-container .postForm .input-container .file_label span:hover {
+  border: 1px solid #dd003f;
+  cursor: pointer;
+}
+
+main .main-container .postForm .input-container .file_label span i {
+  color: #dd003f;
+  margin-right: 15px;
+}
+
+main .main-container .postForm .input-container .file_label input {
+  display: none;
+}
+
+main .main-container .postForm .btn-container {
+  margin: 30px 0;
+  width: 100%;
+}
+
+main .main-container .notFound {
+  width: 100%;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .main-container .notFound h1 {
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+main .main-container .notFound h1 span {
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #d9f436;
+}
+
+main .main-container .notFound h1 span#ex {
+  color: #dd003f;
+  text-decoration: none;
 }
 /*# sourceMappingURL=App.css.map */

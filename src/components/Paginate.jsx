@@ -22,19 +22,21 @@ export const Paginate = ({ data, type }) => {
   return (
     <>
       <div className='paginate'>{DisplayData}</div>{" "}
-      <div className='paginate-btn-container'>
-        <ReactPaginate
-          previousLabel='prev'
-          nextLabel='next'
-          pageCount={pageCount}
-          onPageChange={pageChange}
-          containerClassName='paginationBtn'
-          previousLinkClassName='prevBtn btn'
-          nextLinkClassName='nextBtn btn'
-          disableClassName='paginationDisabled'
-          activeClassName='paginationActive'
-        />
-      </div>
+      {data.length > 18 && (
+        <div className='paginate-btn-container'>
+          <ReactPaginate
+            previousLabel='prev'
+            nextLabel='next'
+            pageCount={pageCount}
+            onPageChange={pageChange}
+            containerClassName='paginationBtn'
+            previousLinkClassName='prevBtn btn'
+            nextLinkClassName='nextBtn btn'
+            disableClassName='paginationDisabled'
+            activeClassName='paginationActive'
+          />
+        </div>
+      )}
     </>
   );
 };

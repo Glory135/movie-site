@@ -3,9 +3,10 @@
   width: 100%;
   height: 7vh;
   background-color: transparent;
-  border: 2px solid $bgsm;
+  position: relative;
+
   @include sm {
-    @include position(flex-start, space-between,column);
+    @include position(flex-start, space-between, column);
     height: 20vh;
   }
   & select {
@@ -18,47 +19,81 @@
     }
     @include sm {
       width: 100%;
-      height: 46%
+      height: 46%;
     }
   }
-  & .search-container{
-    @include position(center,space-between);
+  & .search-container {
+    @include position(center, space-between);
     width: 70%;
     height: 100%;
     @include sm {
       width: 100%;
-      height: 50%
+      height: 50%;
     }
-     & input {
-    border: none;
-    width: 94%;
-    height: 90%;
-    background-color: $primary;
-    padding: 0 15px;
-    color: white;
-    &:focus {
-      outline: 0;
-    }
-    @include sm {
-      width: 89%;
-    height: 100%
-    }
-  }
-  & .icon-container {
-    @include position;
-    width: 5%;
-    height: 90%;
-    background-color: $primary;
-    cursor: pointer;
-@include sm {
-  width: 10%;
-  height: 100%
-}
-    & i {
+    & input {
+      border: none;
+      width: 94%;
+      height: 90%;
+      background-color: $primary;
+      padding: 0 15px;
       color: white;
+      &:focus {
+        outline: 0;
+      }
+      @include sm {
+        width: 89%;
+        height: 100%;
+      }
     }
-    
+    & .icon-container {
+      @include position;
+      width: 5%;
+      height: 90%;
+      background-color: $primary;
+      cursor: pointer;
+      @include sm {
+        width: 10%;
+        height: 100%;
+      }
+      & i {
+        color: white;
+      }
+    }
   }
+}
+& .result-container {
+  width: 40%;
+  height: 35vh;
+  border: 1px splod red;
+  overflow: hidden;
+  overflow-y: auto;
+  box-shadow: $shadow;
+  background-color: $primary;
+  @include sm {
+    margin-top: 5px;
+    width: 80%;
   }
- 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  & .result {
+    @include position(center, _);
+    width: 100%;
+    padding: 12px 0;
+    padding-left: 15px;
+    background-color: $primary;
+    border-bottom: 1px solid $bgsm;
+    text-transform: capitalize;
+    &:hover {
+      background-color: $bgsm;
+      cursor: pointer;
+    }
+    & span {
+      color: $secondary;
+      font-size: 15px;
+      & span {
+        color: $tertiary;
+      }
+    }
+  }
 }
