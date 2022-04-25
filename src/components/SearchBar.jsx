@@ -36,7 +36,7 @@ export const SearchBar = ({ data, type }) => {
 
           <div className='icon-container'>
             <Link
-              classNAme='Link'
+              className='Link'
               to={
                 place === "home"
                   ? `/?search=${search}`

@@ -51,7 +51,7 @@ export const Sliders = () => {
 
   useEffect(() => {
     getMovies();
-  });
+  }, []);
 
   return (
     <div className='sliders'>
