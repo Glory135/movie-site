@@ -20,7 +20,7 @@ export const PostSeries = () => {
     const token = JSON.parse(localStorage.getItem("movieHunter_user_token"));
     try {
       await axios.post(
-        "https://moviehunterr.herokuapp.com/api/admin/series",
+        "https://movie-site-5lzl.onrender.com/api/admin/series",
         { title, writter, director, poster, genres },
         {
           headers: { authorization: `Bearer ${token}` },

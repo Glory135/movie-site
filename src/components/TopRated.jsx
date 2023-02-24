@@ -8,7 +8,7 @@ export const TopRated = ({ type }) => {
   const getMovies = async () => {
     try {
       const movies = await axios.get(
-        "https://moviehunterr.herokuapp.com/api/movies/all"
+        "https://movie-site-5lzl.onrender.com/api/movies/all"
       );
       setVideos(movies.data);
     } catch (error) {
@@ -18,7 +18,7 @@ export const TopRated = ({ type }) => {
   const getSeries = async () => {
     try {
       const series = await axios.get(
-        "https://moviehunterr.herokuapp.com/api/series"
+        "https://movie-site-5lzl.onrender.com/api/series"
       );
       setVideos(series.data);
     } catch (error) {

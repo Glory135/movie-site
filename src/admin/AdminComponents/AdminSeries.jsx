@@ -13,7 +13,7 @@ export const AdminSeries = ({ setShowSeasons, setSerieId }) => {
     const getSeries = async () => {
       try {
         const res = await axios.get(
-          "https://moviehunterr.herokuapp.com/api/series"
+          "https://movie-site-5lzl.onrender.com/api/series"
         );
         setSeries(res.data.reverse());
       } catch (err) {
@@ -81,7 +81,7 @@ export const AdminSeries = ({ setShowSeasons, setSerieId }) => {
             <div
               onClick={() =>
                 handleDelete(
-                  `https://moviehunterr.herokuapp.com/api/admin/series`,
+                  `https://movie-site-5lzl.onrender.com/api/admin/series`,
                   params.row._id,
                   params.row.title,
                   setLoggedIn,

@@ -25,7 +25,7 @@ export const PostEpisode = () => {
     const getMovie = async () => {
       try {
         const res = await axios.get(
-          `https://moviehunterr.herokuapp.com/api/series/season/episode/${episodeId}`
+          `https://movie-site-5lzl.onrender.com/api/series/season/episode/${episodeId}`
         );
         setTitle(res.data.title);
         setSeason(res.data.seasonNo);
@@ -50,7 +50,7 @@ export const PostEpisode = () => {
     if (editMode) {
       try {
         await axios.put(
-          `https://moviehunterr.herokuapp.com/api/admin/series/season/episode/${episodeId}`,
+          `https://movie-site-5lzl.onrender.com/api/admin/series/season/episode/${episodeId}`,
           {
             title,
             airDate,
@@ -74,7 +74,7 @@ export const PostEpisode = () => {
     } else {
       try {
         await axios.post(
-          "https://moviehunterr.herokuapp.com/api/admin/series/season/episode",
+          "https://movie-site-5lzl.onrender.com/api/admin/series/season/episode",
           {
             title,
             airDate,

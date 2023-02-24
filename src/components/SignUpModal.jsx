@@ -62,7 +62,7 @@ export const SignUpModal = ({ signOpen, setSignOpen, setLogOpen }) => {
     if (rePassword === password) {
       try {
         await axios.post(
-          "https://moviehunterr.herokuapp.com/api/users/register",
+          "https://movie-site-5lzl.onrender.com/api/users/register",
           {
             firstname,
             lastname,

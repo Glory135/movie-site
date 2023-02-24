@@ -14,7 +14,7 @@ export const Home = () => {
   useEffect(() => {
     const getEpisodes = async () => {
       const res = await axios.get(
-        `https://moviehunterr.herokuapp.com/api/series/season/episodes/all/${search}`
+        `https://movie-site-5lzl.onrender.com/api/series/season/episodes/all/${search}`
       );
       setEpisodes(res.data);
     };

@@ -14,7 +14,7 @@ export const AdminMovies = () => {
     const getMovies = async () => {
       try {
         const res = await axios.get(
-          "https://moviehunterr.herokuapp.com/api/movies/all"
+          "https://movie-site-5lzl.onrender.com/api/movies/all"
         );
         setMovies(res.data.reverse());
       } catch (err) {
@@ -73,7 +73,7 @@ export const AdminMovies = () => {
             <div
               onClick={() =>
                 handleDelete(
-                  `https://moviehunterr.herokuapp.com/api/admin/movies/delete`,
+                  `https://movie-site-5lzl.onrender.com/api/admin/movies/delete`,
                   params.row._id,
                   params.row.title,
                   setLoggedIn,

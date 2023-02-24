@@ -15,7 +15,7 @@ export const AllUsers = () => {
 
       try {
         const res = await axios.get(
-          "https://moviehunterr.herokuapp.com/api/admin/users/all",
+          "https://movie-site-5lzl.onrender.com/api/admin/users/all",
           { headers: { authorization: `Bearer ${token}` } }
         );
         setUsers(res.data.reverse());
@@ -80,7 +80,7 @@ export const AllUsers = () => {
             <div
               onClick={() =>
                 handleDelete(
-                  `https://moviehunterr.herokuapp.com/api/admin/users`,
+                  `https://movie-site-5lzl.onrender.com/api/admin/users`,
                   params.row._id,
                   params.row.username,
                   setLoggedIn,

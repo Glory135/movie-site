@@ -21,7 +21,7 @@ export const SingleMovie = () => {
   useEffect(() => {
     const getMovie = async () => {
       const res = await axios.get(
-        `https://moviehunterr.herokuapp.com/api/movies/${id}`
+        `https://movie-site-5lzl.onrender.com/api/movies/${id}`
       );
       setData(res.data);
     };
@@ -33,7 +33,7 @@ export const SingleMovie = () => {
     const check = async () => {
       try {
         const exists = await axios.get(
-          `https://moviehunterr.herokuapp.com/api/users/me/favourite/${id}`,
+          `https://movie-site-5lzl.onrender.com/api/users/me/favourite/${id}`,
           {
             headers: { authorization: `Bearer ${token}` },
           }
@@ -53,7 +53,7 @@ export const SingleMovie = () => {
   const like = async () => {
     try {
       await axios.put(
-        `https://moviehunterr.herokuapp.com/api/movies/like/${id}`
+        `https://movie-site-5lzl.onrender.com/api/movies/like/${id}`
       );
       notifySuccess("Linked!!");
     } catch (error) {
@@ -64,7 +64,7 @@ export const SingleMovie = () => {
   const unlike = async () => {
     try {
       await axios.put(
-        `https://moviehunterr.herokuapp.com/api/movies/unlike/${id}`
+        `https://movie-site-5lzl.onrender.com/api/movies/unlike/${id}`
       );
       notifySuccess("unLinked!!");
     } catch (error) {
@@ -86,7 +86,7 @@ export const SingleMovie = () => {
   const dislike = async () => {
     try {
       await axios.put(
-        `https://moviehunterr.herokuapp.com/api/movies/dislike/${id}`
+        `https://movie-site-5lzl.onrender.com/api/movies/dislike/${id}`
       );
       notifySuccess("Disliked!!");
     } catch (error) {
@@ -97,7 +97,7 @@ export const SingleMovie = () => {
   const undislike = async () => {
     try {
       await axios.put(
-        `https://moviehunterr.herokuapp.com/api/movies/undislike/${id}`
+        `https://movie-site-5lzl.onrender.com/api/movies/undislike/${id}`
       );
       notifySuccess("unDisliked!!");
     } catch (error) {

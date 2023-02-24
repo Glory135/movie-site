@@ -44,7 +44,7 @@ export const LoginModal = ({ logOpen, setLogOpen }) => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://moviehunterr.herokuapp.com/api/users/login",
+        "https://movie-site-5lzl.onrender.com/api/users/login",
         { email, password }
       );
       const token = response.data.token;

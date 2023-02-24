@@ -17,7 +17,7 @@ export const PostSeason = () => {
     const token = JSON.parse(localStorage.getItem("movieHunter_user_token"));
     try {
       await axios.post(
-        "https://moviehunterr.herokuapp.com/api/admin/series/season",
+        "https://movie-site-5lzl.onrender.com/api/admin/series/season",
         {
           title,
           season,

@@ -39,7 +39,7 @@ export const Profile = () => {
     if (token) {
       try {
         await axios.put(
-          "https://moviehunterr.herokuapp.com/api/users/update",
+          "https://movie-site-5lzl.onrender.com/api/users/update",
           { firstname, lastname, username, email, phone },
           {
             headers: { authorization: `Bearer ${token}` },
@@ -59,7 +59,7 @@ export const Profile = () => {
     if (token) {
       try {
         await axios.put(
-          "https://moviehunterr.herokuapp.com/api/users/update/password",
+          "https://movie-site-5lzl.onrender.com/api/users/update/password",
           { oldPassword: password, newPassword },
           {
             headers: { authorization: `Bearer ${token}` },
@@ -90,7 +90,7 @@ export const Profile = () => {
     if (token) {
       try {
         await axios.put(
-          "https://moviehunterr.herokuapp.com/api/users/update",
+          "https://movie-site-5lzl.onrender.com/api/users/update",
           { image: pic },
           {
             headers: { authorization: `Bearer ${token}` },

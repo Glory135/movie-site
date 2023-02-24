@@ -41,7 +41,7 @@ export const Sliders = () => {
   const getMovies = async () => {
     try {
       const movies = await axios.get(
-        "https://moviehunterr.herokuapp.com/api/movies/all"
+        "https://movie-site-5lzl.onrender.com/api/movies/all"
       );
       setMovies(movies.data);
     } catch (error) {

@@ -15,7 +15,7 @@ export const Movies = () => {
   useEffect(() => {
     const getMovies = async () => {
       const res = await axios.get(
-        `https://moviehunterr.herokuapp.com/api/movies/all/${search}`
+        `https://movie-site-5lzl.onrender.com/api/movies/all/${search}`
       );
       setData(res.data);
     };

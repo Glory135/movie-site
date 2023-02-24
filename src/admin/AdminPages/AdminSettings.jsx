@@ -30,7 +30,7 @@ export const AdminSettings = () => {
       const token = JSON.parse(localStorage.getItem("movieHunter_user_token"));
       try {
         await axios.post(
-          "https://moviehunterr.herokuapp.com/api/admin/register",
+          "https://movie-site-5lzl.onrender.com/api/admin/register",
           {
             firstname,
             lastname,

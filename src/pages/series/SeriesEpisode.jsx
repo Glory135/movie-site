@@ -19,19 +19,19 @@ export const SeriesEpisode = () => {
   useEffect(() => {
     const getEpisode = async () => {
       const res = await axios.get(
-        `https://moviehunterr.herokuapp.com/api/series/season/episode/${id}`
+        `https://movie-site-5lzl.onrender.com/api/series/season/episode/${id}`
       );
       setEpisode(res.data);
     };
     const getSeason = async () => {
       const res = await axios.get(
-        `https://moviehunterr.herokuapp.com/api/series/season/${episode.season}`
+        `https://movie-site-5lzl.onrender.com/api/series/season/${episode.season}`
       );
       setSeason(res.data.episodes);
     };
     const getSerie = async () => {
       const res = await axios.get(
-        `https://moviehunterr.herokuapp.com/api/series/${episode.series}`
+        `https://movie-site-5lzl.onrender.com/api/series/${episode.series}`
       );
       setSerie(res.data.singleSeries);
     };
@@ -46,7 +46,7 @@ export const SeriesEpisode = () => {
     const check = async () => {
       try {
         const exists = await axios.get(
-          `https://moviehunterr.herokuapp.com/api/users/me/favourite/${id}`,
+          `https://movie-site-5lzl.onrender.com/api/users/me/favourite/${id}`,
           {
             headers: { authorization: `Bearer ${token}` },
           }

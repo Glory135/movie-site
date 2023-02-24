@@ -15,7 +15,7 @@ export const AdminEpisodes = ({ seasonId }) => {
   useEffect(() => {
     const getEpisodes = async () => {
       const res = await axios.get(
-        `https://moviehunterr.herokuapp.com/api/series/season/${seasonId}/episodes`
+        `https://movie-site-5lzl.onrender.com/api/series/season/${seasonId}/episodes`
       );
       setEpisodes(res.data);
     };
@@ -57,7 +57,7 @@ export const AdminEpisodes = ({ seasonId }) => {
             <div
               onClick={() =>
                 handleDelete(
-                  `https://moviehunterr.herokuapp.com/api/admin/series/season/episode`,
+                  `https://movie-site-5lzl.onrender.com/api/admin/series/season/episode`,
                   params.row._id,
                   `Episode ${params.row.episode} in  Season ${params.row.seasonNo} of ${params.row.title}`,
                   setLoggedIn,
